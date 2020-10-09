@@ -1,0 +1,1 @@
+insert into Customer values(101, 23, 'mpl', 'male', 'thej')
