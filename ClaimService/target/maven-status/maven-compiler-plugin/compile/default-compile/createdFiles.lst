@@ -1,0 +1,5 @@
+com\mc\claim\ClaimServiceApplication.class
+com\mc\claim\exception\ClaimNotFoundException.class
+com\mc\claim\service\ClaimRepository.class
+com\mc\claim\service\ClaimService.class
+com\mc\claim\model\ClaimBean.class
