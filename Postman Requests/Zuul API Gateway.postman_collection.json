@@ -1,0 +1,112 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Zuul API Gateway",
+		"_postman_id": "426e8a8b-9286-e673-f0cf-37dd78aeccda",
+		"description": "Sevices passing through Zuul API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "actuator",
+			"request": {
+				"url": "localhost:8765/actuator",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW4xOnNlY3JldDE=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "URL for accessing Actuator with admin credentials"
+			},
+			"response": []
+		},
+		{
+			"name": "customer-api/Cust Info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user1",
+						"password": "secret1",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8765/customer-api/customer/101/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjE6c2VjcmV0MQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Basic URL for cust info with Zuul"
+			},
+			"response": []
+		},
+		{
+			"name": "customer-api/claims",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user1",
+						"password": "secret1",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8765/customer-api/customer/101/claims",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjE6c2VjcmV0MQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Claims detailed Info thorugh Zuul"
+			},
+			"response": []
+		},
+		{
+			"name": "customer-api/policy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user1",
+						"password": "secret1",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8765/customer-api/customer/101/policy",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjE6c2VjcmV0MQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Retrieve policies for a customer ID"
+			},
+			"response": []
+		}
+	]
+}

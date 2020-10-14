@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Customer",
+		"_postman_id": "f4a5b70c-1a25-d905-1710-2ba350d0fc8f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer/id/claims",
+			"request": {
+				"url": "localhost:8100/customer/101/claims",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "claims for a particular customer "
+			},
+			"response": []
+		},
+		{
+			"name": "customer/id/fileClaim",
+			"request": {
+				"url": "localhost:8100/customer/101/fileClaim",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"policyId\": 3007,\n    \"amount\": 2000,\n    \"reason\": \"heart attack\"\n}"
+				},
+				"description": "File a claim for a customer"
+			},
+			"response": []
+		},
+		{
+			"name": "customer/id/policy",
+			"request": {
+				"url": "localhost:8100/customer/101/policy",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "List of Polices for a particular customer with the due information"
+			},
+			"response": []
+		},
+		{
+			"name": "customer/id",
+			"request": {
+				"url": "localhost:8100/customer/101",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get the customer info with policies and claims"
+			},
+			"response": []
+		},
+		{
+			"name": "customer/ID/payPremium/policyID",
+			"request": {
+				"url": "localhost:8100/customer/101/payPremium/3001",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amountPaid\": 20000,\n    \"modeOfPayment\": \"PhonePe\"\n}"
+				},
+				"description": "Making a Payment for a particular policy"
+			},
+			"response": []
+		}
+	]
+}

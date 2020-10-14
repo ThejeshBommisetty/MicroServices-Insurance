@@ -1,0 +1,22 @@
+{
+	"variables": [],
+	"info": {
+		"name": "policy",
+		"_postman_id": "5ce2d1ef-d42a-949a-2f38-1d0fdc73fe45",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "policy",
+			"request": {
+				"url": "localhost:8300/101/policy",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "List of policies for a customer"
+			},
+			"response": []
+		}
+	]
+}

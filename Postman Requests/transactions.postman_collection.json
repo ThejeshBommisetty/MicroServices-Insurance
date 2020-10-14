@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "transactions",
+		"_postman_id": "d264a068-476f-d9ec-f4d2-6c1224b5ceba",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transactions",
+			"request": {
+				"url": "localhost:8400/3001/transactions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "for retrieval of transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "payment",
+			"request": {
+				"url": "localhost:8400/payment",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"policyId\": 3001,\n    \"amountPaid\": 20000,\n    \"modeOfPayment\": \"card\"\n}"
+				},
+				"description": "for making a payment"
+			},
+			"response": []
+		}
+	]
+}

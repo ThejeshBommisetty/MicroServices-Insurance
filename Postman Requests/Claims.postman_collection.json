@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Claims",
+		"_postman_id": "fcdd431a-435e-d03f-5598-750ad9c20dfd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "claims",
+			"request": {
+				"url": "localhost:8200/claims",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Getting all the claims for a customer Id"
+			},
+			"response": []
+		},
+		{
+			"name": "fileClaim",
+			"request": {
+				"url": "localhost:8200/fileClaim",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"custId\": 101,\n        \"amount\": 2000,\n        \"reason\": \"heart attack\",\n        \"policyId\": 3007\n    }"
+				},
+				"description": "Filing a claim"
+			},
+			"response": []
+		},
+		{
+			"name": "custID/claims",
+			"request": {
+				"url": "localhost:8200/101/claims/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "claims for a customerID"
+			},
+			"response": []
+		}
+	]
+}
